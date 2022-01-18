@@ -20,3 +20,7 @@ Route::get('/', function () {
 
 Route::resource('category', \App\Http\Controllers\CategoryController::class);
 Route::get('category/destroy/{id}', [\App\Http\Controllers\CategoryController::class, 'destroy'])->name('category.destroy');
+
+
+Route::resources('mitra', \App\Http\Controllers\MitraController::class);
+Route::get('mitra/destroy/{id}', [\App\Http\Controllers\MitraController::class, 'destroy'])->name('mitra.destroy');
