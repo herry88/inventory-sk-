@@ -38,7 +38,9 @@
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $ct->nama_category }}</td>
                                             <td>{{ $ct->keterangan }}</td>
-                                            <td>TOols</td>
+                                            <td><a href="{{ route('category.edit', $ct->id) }}"
+                                                    class="btn btn-outline-warning"><i class="fas fa-edit"></i></a> <a
+                                                    href="{{ route('category.destroy', $ct->id) }}" class="btn btn-danger"><i class="fas fa-trash"></i></a></td>
                                         </tr>
                                     @empty
                                         <tr>
