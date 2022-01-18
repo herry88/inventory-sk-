@@ -18,4 +18,5 @@ Route::get('/', function () {
 });
 
 
-Route::resource('category',\App\Http\Controllers\CategoryController::class);
+Route::resource('category', \App\Http\Controllers\CategoryController::class);
+Route::get('category/destroy/{id}', [\App\Http\Controllers\CategoryController::class, 'destroy'])->name('category.destroy');
