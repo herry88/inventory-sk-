@@ -20,7 +20,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <a href="#" class="btn btn-outline-primary">Add Data</a>
+                            <a href="{{ route('category.create') }}" class="btn btn-outline-primary">Add Data</a>
                         </div>
                         <div class="card-body">
                             <table class="table table-outline-primary table-bordered">
