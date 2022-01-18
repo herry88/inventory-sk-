@@ -12,10 +12,16 @@
                 <a href="#" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
 
             </li>
-            <li class="menu-header">Starter</li>
+            <li class="menu-header">Main Menu</li>
 
             <li><a class="nav-link" href="{{ route('category.index') }}"><i class="far fa-square"></i>
                     <span>Category</span></a></li>
+            <li><a class="nav-link" href="{{ route('category.index') }}"><i class="far fa-square"></i>
+                    <span>Mitra</span></a></li>
+            <li><a class="nav-link" href="{{ route('category.index') }}"><i class="far fa-square"></i>
+                    <span>Product</span></a></li>
+            <li><a class="nav-link" href="{{ route('category.index') }}"><i class="far fa-square"></i>
+                    <span>Transaksi</span></a></li>
 
 
         </ul>
