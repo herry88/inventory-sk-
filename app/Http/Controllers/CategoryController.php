@@ -15,6 +15,8 @@ class CategoryController extends Controller
     public function index()
     {
         //
+        $category = Category::all();
+        return view('category.index', compact('category'));
     }
 
     /**
@@ -25,6 +27,7 @@ class CategoryController extends Controller
     public function create()
     {
         //
+        return view('category.create');
     }
 
     /**
@@ -35,7 +38,13 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'nama_category' =>'required|string|min:2',
+            'keterangan' => 'required'
+        ]);
+
+        Category::create($request->all());
+        return redirect()->route('category.index');
     }
 
     /**
