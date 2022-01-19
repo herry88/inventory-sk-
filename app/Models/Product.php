@@ -20,12 +20,12 @@ class Product extends Model
      */
     public function mitraname()
     {
-        return $this->belongsTo(Mitra::class);
+        return $this->belongsTo(Mitra::class,'mitra_id');
     }
 
 
     public function categoryname()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class,'category_id');
     }
 }
