@@ -40,7 +40,9 @@
                                             <td>{{ $mt->nama }}</td>
                                             <td>{{ $mt->alamat }}</td>
                                             <td>{{ $mt->pic }}</td>
-                                            <td>tools</td>
+                                            <td><a href="{{ route('mitra.edit', $mt->id) }}"
+                                                    class="btn btn-outline-warning"><i class="fas fa-edit"></i></a> <a
+                                                    href="{{ route('mitra.destroy', $mt->id) }}" class="btn btn-danger"><i class="fas fa-trash"></i></a></td>
                                         </tr>
                                     @empty
                                         <tr>

@@ -23,13 +23,36 @@
                             <h4>Create Mitra</h4>
                         </div>
                         <div class="card-body">
-                            <form action="#" method="post">
+                            <form action="{{ route('mitra.store') }}" method="post">
+                                @csrf
+                                @method('POST')
                                 <div class="form-group row mb-4">
                                     <label for="" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama
                                         Mitra</label>
                                     <div class="col-sm-12 col-md-7">
                                         <input type="text" class="form-control" name="nama" placeholder="Nama Mitra">
                                     </div>
+                                </div>
+                                <div class="form-group row mb-4">
+                                    <label for="" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Alamat</label>
+                                    <div class="col-sm-12 col-md-7">
+                                        <input type="text" class="form-control" name="alamat" placeholder="Alamat">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-4">
+                                    <label for="" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">PIC</label>
+                                    <div class="col-sm-12 col-md-7">
+                                        <input type="text" class="form-control" name="pic" placeholder="PIC">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-4">
+
+                                    <div class="col-sm-12 col-md-7">
+                                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                                        <button class="btn btn-primary" type="submit">Save</button>
+                                    </div>
+
+                                </div>
                             </form>
                         </div>
                     </div>

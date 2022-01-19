@@ -37,6 +37,14 @@ class MitraController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request, [
+            'nama'=>'required',
+            'alamat'=>'required',
+            'pic'=>'required'
+        ]);
+        Mitra::create($request->all());
+        return redirect()->route('mitra.index');
+
     }
 
     /**
@@ -56,9 +64,10 @@ class MitraController extends Controller
      * @param  \App\Models\Mitra  $mitra
      * @return \Illuminate\Http\Response
      */
-    public function edit(Mitra $mitra)
+    public function edit($id)
     {
-        //
+        $mitra = Mitra::find($id);
+        return view('mitra.edit',compact('mitra'));
     }
 
     /**
@@ -68,9 +77,16 @@ class MitraController extends Controller
      * @param  \App\Models\Mitra  $mitra
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Mitra $mitra)
+    public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'nama'=>'required',
+            'alamat'=>'required',
+            'pic'=>'required'
+        ]);
+        $mitra = Mitra::findOrFail($id);
+        $mitra->update($request->all());
+        return redirect()->route('mitra.index');
     }
 
     /**
@@ -79,8 +95,9 @@ class MitraController extends Controller
      * @param  \App\Models\Mitra  $mitra
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Mitra $mitra)
+    public function destroy($id)
     {
-        //
+        Mitra::destroy($id);
+        return redirect()->route('mitra.index');
     }
 }
