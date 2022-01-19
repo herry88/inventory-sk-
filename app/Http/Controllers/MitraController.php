@@ -38,7 +38,7 @@ class MitraController extends Controller
     {
         //
         $this->validate($request, [
-            'nama'=>'required',
+            'mitra_name'=>'required',
             'alamat'=>'required',
             'pic'=>'required'
         ]);
@@ -80,7 +80,7 @@ class MitraController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'nama'=>'required',
+            'mitra_name'=>'required',
             'alamat'=>'required',
             'pic'=>'required'
         ]);

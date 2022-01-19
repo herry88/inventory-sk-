@@ -30,7 +30,7 @@
                                     <label for="" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama
                                         Mitra</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" class="form-control" name="nama" placeholder="Nama Mitra">
+                                        <input type="text" class="form-control" name="mitra_name" placeholder="Nama Mitra">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">

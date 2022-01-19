@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Mitra;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $product = Product::all();
+        return view('product.index', compact('product'));
     }
 
     /**
@@ -24,7 +27,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $category = Category::all();
+        $mitra = Mitra::all();
+        return view('product.create', compact('category', 'mitra'));
     }
 
     /**
@@ -35,7 +40,14 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name_product' => 'required',
+            'category_id' => 'required',
+            'mitra_id' => 'required',
+            'stock' => 'required'
+        ]);
+        Product::create($request->all());
+        return redirect()->route('product.index');
     }
 
     /**

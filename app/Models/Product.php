@@ -8,4 +8,24 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name_product', 'stock', 'category_id', 'mitra_id'];
+    protected $table = 'products';
+
+
+    /**
+     * Get all of the comments for the Product
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function mitraname()
+    {
+        return $this->belongsTo(Mitra::class);
+    }
+
+
+    public function categoryname()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

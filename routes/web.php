@@ -24,3 +24,6 @@ Route::get('category/destroy/{id}', [\App\Http\Controllers\CategoryController::c
 
 Route::resource('mitra', \App\Http\Controllers\MitraController::class);
 Route::get('mitra/destroy/{id}', [\App\Http\Controllers\MitraController::class, 'destroy'])->name('mitra.destroy');
+
+Route::resource('product', App\Http\Controllers\ProductController::class);
+Route::get('product/destroy/{id}', [App\Http\Controllers\ProductController::class, 'destroy'])->name('product.destroy');
