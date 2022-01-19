@@ -16,11 +16,11 @@
 
             <li><a class="nav-link" href="{{ route('category.index') }}"><i class="far fa-square"></i>
                     <span>Category</span></a></li>
-            <li><a class="nav-link" href="{{ route('category.index') }}"><i class="far fa-square"></i>
+            <li><a class="nav-link" href="{{ route('mitra.index') }}"><i class="far fa-square"></i>
                     <span>Mitra</span></a></li>
-            <li><a class="nav-link" href="{{ route('category.index') }}"><i class="far fa-square"></i>
+        <li><a class="nav-link" href="#"><i class="far fa-square"></i>
                     <span>Product</span></a></li>
-            <li><a class="nav-link" href="{{ route('category.index') }}"><i class="far fa-square"></i>
+            <li><a class="nav-link" href="#"><i class="far fa-square"></i>
                     <span>Transaksi</span></a></li>
 
 
