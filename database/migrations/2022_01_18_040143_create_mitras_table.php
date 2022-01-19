@@ -15,7 +15,7 @@ class CreateMitrasTable extends Migration
     {
         Schema::create('mitras', function (Blueprint $table) {
             $table->id();
-            $table->string('nama')->nullable();
+            $table->string('mitra_name')->nullable();
             $table->text('alamat');
             $table->string('pic')->nullable();
             $table->timestamps();

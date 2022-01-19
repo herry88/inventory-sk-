@@ -9,5 +9,15 @@ class Mitra extends Model
 {
     use HasFactory;
     protected $table = 'mitras';
-    protected $fillable = ['nama','alamat','pic'];
+    protected $fillable = ['mitra_name','alamat','pic'];
+
+    /**
+     * Get the  that owns the Mitra
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function product()
+    {
+        return $this->hasmany(Product::class);
+    }
 }

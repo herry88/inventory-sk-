@@ -39,8 +39,8 @@
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $pr->name_product }}</td>
-                                            <td>{{ $pr->mitraname->nama }}</td>
-                                            <td>{{ $pr->categoryname->nama_category }}</td>
+                                            <td>{{ $pr->mitraname}}</td>
+                                            <td>{{ $pr->category_id }}</td>
                                             <td>{{ $pr->stock }}</td>
                                         </tr>
 

@@ -37,7 +37,7 @@
                                     @forelse ($mitra as $mt)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $mt->nama }}</td>
+                                            <td>{{ $mt->mitra_name }}</td>
                                             <td>{{ $mt->alamat }}</td>
                                             <td>{{ $mt->pic }}</td>
                                             <td><a href="{{ route('mitra.edit', $mt->id) }}"

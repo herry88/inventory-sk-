@@ -9,23 +9,23 @@ class Product extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name_product', 'stock', 'category_id', 'mitra_id'];
+    protected $table = 'products';
+
+
     /**
-     * Get the user that owns the Product
+     * Get all of the comments for the Product
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function mitraname()
     {
-        return $this->belongsTo(Mitra::class, 'id');
+        return $this->belongsTo(Mitra::class);
     }
 
-    /**
-     * Get the user that owns the Product
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
+
     public function categoryname()
     {
-        return $this->belongsTo(Category::class, 'id');
+        return $this->belongsTo(Category::class);
     }
 }
