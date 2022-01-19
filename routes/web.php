@@ -27,3 +27,7 @@ Route::get('mitra/destroy/{id}', [\App\Http\Controllers\MitraController::class, 
 
 Route::resource('product', App\Http\Controllers\ProductController::class);
 Route::get('product/destroy/{id}', [App\Http\Controllers\ProductController::class, 'destroy'])->name('product.destroy');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
