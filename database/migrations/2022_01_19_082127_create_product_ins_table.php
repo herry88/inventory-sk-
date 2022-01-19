@@ -15,6 +15,12 @@ class CreateProductInsTable extends Migration
     {
         Schema::create('product_ins', function (Blueprint $table) {
             $table->id();
+            $table->string('no_invoice')->nullable();
+            $table->bigInteger('product_id')->unsigned();
+            $table->bigInteger('mitra_id')->unsigned();
+            $table->integer('stock');
+            $table->bigInteger('user_id')->unsigned();
+            $table->string('keterangan')->nullable();
             $table->timestamps();
         });
     }
