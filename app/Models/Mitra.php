@@ -18,6 +18,6 @@ class Mitra extends Model
      */
     public function product()
     {
-        return $this->hasmany(Product::class);
+        return $this->hasMany(Product::class);
     }
 }
