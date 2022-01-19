@@ -39,9 +39,12 @@
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $pr->name_product }}</td>
-                                            <td>{{ $pr->mitraname}}</td>
+                                            <td>{{ $pr->mitra_id }}</td>
                                             <td>{{ $pr->category_id }}</td>
                                             <td>{{ $pr->stock }}</td>
+                                            <td><a href="#" class="btn btn-outline-warning"><i
+                                                        class="fas fa-edit"></i></a> <a href=""
+                                                    class="btn btn-outline-danger"><i class="fas fa-trash"></i></a></td>
                                         </tr>
 
                                     @empty
