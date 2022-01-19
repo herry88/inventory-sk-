@@ -42,8 +42,9 @@
                                             <td>{{ $pr->mitraname->mitra_name }}</td>
                                             <td>{{ $pr->categoryname->nama_category }}</td>
                                             <td>{{ $pr->stock }}</td>
-                                            <td><a href="#" class="btn btn-outline-warning"><i
-                                                        class="fas fa-edit"></i></a> <a href=""
+                                            <td><a href="{{ route('product.edit', $pr->id) }}"
+                                                    class="btn btn-outline-warning"><i class="fas fa-edit"></i></a> <a
+                                                    href="{{ route('product.destroy', $pr->id) }}"
                                                     class="btn btn-outline-danger"><i class="fas fa-trash"></i></a></td>
                                         </tr>
 

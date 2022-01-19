@@ -67,9 +67,12 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit($id)
     {
-        //
+        $product = Product::find($id);
+        $mitra = Mitra::all();
+        $category = Category::all();
+        return view('product.edit', compact('product', 'mitra', 'category'));
     }
 
     /**
@@ -79,9 +82,17 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name_product' => 'required',
+            'category_id' => 'required',
+            'mitra_id' => 'required',
+            'stock' => 'required'
+        ]);
+        $product = Product::findOrFail($id);
+        $product->update($request->all());
+        return redirect()->route('product.index');
     }
 
     /**
@@ -90,8 +101,9 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        //
+        Product::destroy($id);
+        return redirect()->route('product.index');
     }
 }

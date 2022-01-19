@@ -23,13 +23,14 @@
                             <h4>Edit Product</h4>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('product.store') }}" method="post">
+                            <form action="{{ route('product.update', $product->id) }}" method="post">
                                 @csrf
-                                @method('POST')
+                                @method('PUT')
                                 <table class="table table-bordered table-outline-primary">
                                     <tr>
                                         <td><strong>Nama Product</strong></td>
-                                        <td><input type="text" placeholder="Nama Product" name="name_product"
+                                        <td><input type="text" placeholder="Nama Product"
+                                                value="{{ $product->name_product }}" name="name_product"
                                                 class="form-control"></td>
                                     </tr>
                                     <tr>
@@ -37,7 +38,13 @@
                                         <td><select name="category_id" id="" class="form-control">
                                                 <option value="0">-Pilih Kategori-</option>
                                                 @foreach ($category as $ct)
-                                                    <option value="{{ $ct->id }}">{{ $ct->nama_category }}</option>
+                                                    @if ($product->category_id == $ct->id)
+                                                        <option value="{{ $ct->id }}" selected>
+                                                            {{ $ct->nama_category }}</option>
+                                                    @else
+                                                        <option value="{{ $ct->id }}">{{ $ct->nama_category }}
+                                                        </option>
+                                                    @endif
                                                 @endforeach
                                             </select></td>
                                     </tr>
@@ -46,13 +53,19 @@
                                         <td><select name="mitra_id" id="" class="form-control">
                                                 <option value="0">--Pilih Mitra--</option>
                                                 @foreach ($mitra as $mt)
-                                                    <option value="{{ $mt->id }}">{{ $mt->mitra_name }}</option>
+                                                    @if ($product->mitra_id == $mt->id)
+                                                        <option value="{{ $mt->id }}" selected>{{ $mt->mitra_name }}
+                                                        </option>
+                                                    @else
+                                                        <option value="{{ $mt->id }}">{{ $mt->mitra_name }}</option>
+                                                    @endif
                                                 @endforeach
                                             </select></td>
                                     </tr>
                                     <tr>
                                         <td>Qty</td>
-                                        <td><input type="number" class="form-control" name="stock" placeholder="Stock">
+                                        <td><input type="number" class="form-control" value="{{ $product->stock }}"
+                                                name="stock" placeholder="Stock">
                                         </td>
                                     </tr>
                                     <tr>
