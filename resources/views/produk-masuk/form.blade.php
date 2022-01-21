@@ -31,6 +31,14 @@
                                 <label for="">Mitra</label>
                                 {!! Form::select('mitra_id', $mitra, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Product --', 'id' => 'mitra_id', 'required']) !!}
                             </div>
+                            <div class="form-group">
+                                <label for="">Stock</label>
+                                <input type="text" class="form-control" placeholder="stock" name="stock">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <a href="" class="btn btn-default pull-left">Cancel</a>
+                            </div>
                         </div>
                     </div>
                 </div>
