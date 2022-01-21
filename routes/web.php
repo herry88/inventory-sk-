@@ -28,6 +28,10 @@ Route::get('mitra/destroy/{id}', [\App\Http\Controllers\MitraController::class, 
 Route::resource('product', App\Http\Controllers\ProductController::class);
 Route::get('product/destroy/{id}', [App\Http\Controllers\ProductController::class, 'destroy'])->name('product.destroy');
 
+Route::resource('product-masuk', App\Http\Controllers\ProductInController::class);
+
+Route::resource('product-keluar', App\Http\Controllers\ProductOutController::class);
+
 Auth::routes();
 
 // Route::resource('product-in',)
