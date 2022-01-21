@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\ProductIn;
+use App\Models\Product;
+use App\Models\Mitra;
 use Illuminate\Http\Request;
 
 class ProductInController extends Controller
@@ -24,7 +26,9 @@ class ProductInController extends Controller
      */
     public function create()
     {
-        //
+        $product = Product::orderBy('name_product', 'ASC')->get()->pluck('name_product', 'id');
+        $mitra = Mitra::orderBy('mitra_name', 'ASC')->get()->pluck('mitra_name', 'id');
+        return view('produk-masuk.form', compact('product', 'mitra'));
     }
 
     /**
