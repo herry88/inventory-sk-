@@ -14,7 +14,7 @@ class ProductInController extends Controller
      */
     public function index()
     {
-        //
+        return view('produk-masuk.index');
     }
 
     /**
