@@ -30,4 +30,8 @@ Route::get('product/destroy/{id}', [App\Http\Controllers\ProductController::clas
 
 Auth::routes();
 
+// Route::resource('product-in',)
+
+// Route::resource('product-out')
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
