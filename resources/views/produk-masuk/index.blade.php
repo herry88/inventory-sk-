@@ -43,7 +43,7 @@
                                             <td>{{ $pi->mitra_id }}</td>
                                             <td>{{ $pi->stock }}</td>
                                             <td>{{ $pi->no_invoice }}</td>
-                                            <td>#</td>
+                                            <td><a href="#" class="btn btn-outline-warning"><i class="fas fa-eye"></i></a></td>
                                         </tr>
                                     @empty
                                         <tr>

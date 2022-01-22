@@ -1,23 +1,49 @@
-@extends('layouts.app')
+@extends('master')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+    <section class="section">
+        @if (Auth::user()->level == 'admin')
+            <div class="section-header">
+                <h1>DashBoard Admin</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="card card-statistic-1">
+                        <div class="card-icon bg-primary">
+                            <i class="far fa-user"></i>
                         </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h4>Total User</h4>
+                            </div>
+                            <div class="card-body">
+                                0
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+        @else
+            <div class="section-header">
+                <h1>DashBoard User</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="card card-statistic-1">
+                        <div class="card-icon bg-primary">
+                            <i class="far fa-user"></i>
+                        </div>
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h4>Total User</h4>
+                            </div>
+                            <div class="card-body">
+                                0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+    </section>
 @endsection
