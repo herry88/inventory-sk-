@@ -19,7 +19,7 @@ class CreateProductInsTable extends Migration
             $table->bigInteger('product_id')->unsigned();
             $table->bigInteger('mitra_id')->unsigned();
             $table->integer('stock');
-            $table->bigInteger('user_id')->unsigned();
+            // $table->bigInteger('user_id')->unsigned();
             $table->string('keterangan')->nullable();
             $table->timestamps();
         });
