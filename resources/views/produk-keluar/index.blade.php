@@ -15,40 +15,47 @@
             </div>
         </div>
         <div class="section-body">
-            <h2 class="section-title">Product In</h2>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <a href="{{ route('product-masuk.create') }}" class="btn btn-outline-primary">Add Product
-                                    in</a>
-                            </div>
-                            <div class="card-body">
-                                <table class="table table-striped">
-                                    <thead>
+            <h2 class="section-title">Product OUT</h2>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="{{ route('product-keluar.create') }}" class="btn btn-outline-primary">Add Product
+                                Out</a>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Product</th>
+                                        <th>Mitra</th>
+                                        <th>Qty</th>
+                                        <th>No Invoice</th>
+                                        <th>Tools</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse ($productout as $po)
                                         <tr>
-                                            <th>#</th>
-                                            <th>Product</th>
-                                            <th>Mitra</th>
-                                            <th>Qty</th>
-                                            <th>Tgl Masuk</th>
-                                            <th>Tools</th>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><a href="#" class="btn btn-outline-warning"><i class="fas fa-eye"></i></a></td>
                                         </tr>
-                                    </thead>
-                                    <tbody>
+                                    @empty
                                         <tr>
-                                            <td>#</td>
-                                            <td>#</td>
-                                            <td>#</td>
-                                            <td>#</td>
-                                            <td>#</td>
+                                            <td colspan="6" class="text-center">Belum Ada Data</td>
                                         </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                                    @endforelse
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
+            </div>
             </h2>
         </div>
     </section>
