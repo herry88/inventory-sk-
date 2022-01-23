@@ -30,6 +30,13 @@
             </ul>
         @else
             <ul class="sidebar-menu">
+                <li class="menu-header">Dashboard</li>
+                <li class="nav-item">
+                    <a href="{{ route('dashboard.index') }}" class="nav-link"><i
+                            class="fas fa-fire"></i><span>Dashboard</span></a>
+
+                </li>
+                <li class="menu-header">Main Menu</li>
                 <li><a class="nav-link" href="{{ route('product-masuk.index') }}"><i class="far fa-square"></i>
                         <span>Produk Masuk</span></a></li>
                 <li><a class="nav-link" href="{{ route('product-keluar.index') }}"><i

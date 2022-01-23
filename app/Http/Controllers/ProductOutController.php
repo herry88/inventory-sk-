@@ -14,7 +14,8 @@ class ProductOutController extends Controller
      */
     public function index()
     {
-        //
+        $productout = ProductOut::all();
+        return view('produk-keluar.index', compact('productout'));
     }
 
     /**
