@@ -32,8 +32,8 @@ class ProductOutController extends Controller
     {
         $product = Product::orderBy('name_product', 'ASC')->get()->pluck('name_product', 'id');
         $mitra = Mitra::orderBy('mitra_name', 'ASC')->get()->pluck('mitra_name', 'id');
-
-        return view('produk-keluar.form', compact('product', 'mitra'));
+        $productout = ProductOut::all();
+        return view('produk-keluar.form', compact('product', 'mitra','productout'));
     }
 
     /**

@@ -39,10 +39,10 @@
                                     @forelse ($productout as $po)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>{{ $po->productname->name_product }}</td>
+                                            <td>{{ $po->mitraname->mitra_name }}</td>
+                                            <td>{{ $po->stock }}</td>
+                                            <td>{{ $po->no_invoice }}</td>
                                             <td><a href="#" class="btn btn-outline-warning"><i class="fas fa-eye"></i></a></td>
                                         </tr>
                                     @empty
