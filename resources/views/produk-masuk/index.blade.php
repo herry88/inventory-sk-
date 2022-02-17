@@ -43,7 +43,7 @@
                                             <td>{{ $pi->mitraname->mitra_name }}</td>
                                             <td>{{ $pi->stock }}</td>
                                             <td>{{ $pi->no_invoice }}</td>
-                                            <td><a href="#" class="btn btn-outline-warning"><i class="fas fa-eye"></i></a></td>
+                                            <td><a href="{{route('product-masuk.show', $pi->id)}}" class="btn btn-outline-warning"><i class="fas fa-eye"></i></a></td>
                                         </tr>
                                     @empty
                                         <tr>

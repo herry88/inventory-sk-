@@ -65,9 +65,12 @@ class ProductInController extends Controller
      * @param  \App\Models\ProductIn  $productIn
      * @return \Illuminate\Http\Response
      */
-    public function show(ProductIn $productIn)
+    public function show($id)
     {
         //
+        $productIn = ProductIn::findOrFail($id);
+        $mitra = Mitra::all();
+        return view('produk-masuk.show', compact('productIn','mitra'));
     }
 
     /**

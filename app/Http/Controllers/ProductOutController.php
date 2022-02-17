@@ -66,9 +66,12 @@ class ProductOutController extends Controller
      * @param  \App\Models\ProductOut  $productOut
      * @return \Illuminate\Http\Response
      */
-    public function show(ProductOut $productOut)
+    public function show($id)
     {
         //
+        $productOut = ProductOut::findOrFail($id);
+        $mitra = Mitra::all();
+        return view('produk-keluar.show',compact('productOut','mitra'));
     }
 
     /**

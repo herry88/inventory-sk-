@@ -43,7 +43,7 @@
                                             <td>{{ $po->mitraname->mitra_name }}</td>
                                             <td>{{ $po->stock }}</td>
                                             <td>{{ $po->no_invoice }}</td>
-                                            <td><a href="#" class="btn btn-outline-warning"><i class="fas fa-eye"></i></a></td>
+                                            <td><a href="{{route('product-keluar.show',$po->id)}}" class="btn btn-outline-warning"><i class="fas fa-eye"></i></a></td>
                                         </tr>
                                     @empty
                                         <tr>
