@@ -24,7 +24,7 @@
                                 Out</a>
                         </div>
                         <div class="card-body">
-                            <table class="table table-striped">
+                            <table id="example"  style="width:100%" class="display table table-stripped">
                                 <thead>
                                     <tr>
                                         <th>#</th>

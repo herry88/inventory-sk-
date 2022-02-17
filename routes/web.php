@@ -30,6 +30,7 @@ Route::group(['middleware' => 'auth','isAdmin.admin'], function () {
     Route::resource('product-masuk', App\Http\Controllers\ProductInController::class);
 
     Route::resource('product-keluar', App\Http\Controllers\ProductOutController::class);
+
 });
 
 

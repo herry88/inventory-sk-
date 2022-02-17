@@ -17,13 +17,13 @@
         <div class="section-body">
             <h2 class="section-title">Product Page</h2>
             <div class="row">
-                <div class="col-12">
+            <div class="col-12">
                     <div class="card">
                         <div class="card-header">
                             <a href="{{ route('product.create') }}" class="btn btn-outline-primary">Add Product</a>
                         </div>
                         <div class="card-body">
-                            <table class="table table-stripped ">
+                            <table id="example"  style="width:100%" class="display table table-stripped ">
                                 <thead>
                                     <tr>
                                         <th>#</th>

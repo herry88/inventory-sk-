@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         $userAdmin = [
             [
                 'name' => 'admin',
-                'email' => 'herry081288@gmail.com',
+                'email' => 'henry@gmail.com',
                 'email_verified_at' => now(),
                 'password' => Hash::make('password'),
                 'level' => 'admin'

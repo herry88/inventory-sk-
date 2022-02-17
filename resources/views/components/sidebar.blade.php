@@ -27,6 +27,8 @@
                 <li><a class="nav-link" href="{{ route('product-keluar.index') }}"><i
                             class="far fa-square"></i>
                         <span>Produk Keluar</span></a></li>
+
+
             </ul>
         @else
             <ul class="sidebar-menu">
